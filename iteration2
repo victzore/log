@@ -1,0 +1,82 @@
+/*
+	==================================================
+	Workshop #3 (Part-1):
+	==================================================
+	Name   : Victor Tran
+	ID     : Vtran18
+	Email  : vtran18@myseneca.ca
+	Section: IPC144NDD
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define MIN_YEAR 2010
+#define	MAX_YEAR 2021
+
+int main(void) 
+{
+	const int JAN = 1;
+	const int DEC = 12;
+	int y; // year
+	int m; // month
+	int d = 1; // day
+
+	printf("General Well-being Log\n======================\n");
+
+	printf(" Set the year and month for the well-being log (YYYY MM): ");
+	scanf("%d %d", &y, &m);
+	if (y > MAX_YEAR || y < MIN_YEAR)
+	{
+		printf("     ERROR: The year must be between 2010 and 2021 inclusive");
+	}
+	else if (m > 12 || m < 1)
+	{
+		printf("     ERROR: Jan.(1) - Dec.(12)");
+	}
+	else
+	{ 
+		switch (m)
+		{
+		case 1:
+			m = "JAN";
+			break;
+		case 2:
+			m = "FEB";
+			break;
+		case 3:
+			m = "MAR";
+			break;
+		case 4:
+			m = "APR";
+			break;
+		case 5:
+			m = "MAY";
+			break;
+		case 6:
+			m = "JUN";
+			break;
+		case 7:
+			m = "JUL";
+			break;
+		case 8:
+			m = "AUG";
+			break;
+		case 9:
+			m = "SEP";
+			break;
+		case 10:
+			m = "OCT";
+			break;
+		case 11:
+			m = "NOV";
+			break;
+		case 12:
+			m = "DEC";
+			break;
+		}
+	
+		printf("*** Log Date Set! ***\n");
+		printf("%d-%d-%d", &y, &m, &d);
+	}
+	return 0;
+
+}
