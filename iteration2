@@ -14,8 +14,6 @@
 
 int main(void) 
 {
-	const int JAN = 1;
-	const int DEC = 12;
 	int y; // year
 	int m; // month
 	int d = 1; // day
@@ -37,45 +35,45 @@ int main(void)
 		switch (m)
 		{
 		case 1:
-			m = "JAN";
+			m = &"JAN";
 			break;
 		case 2:
-			m = "FEB";
+			m = &"FEB";
 			break;
 		case 3:
-			m = "MAR";
+			m = &"MAR";
 			break;
 		case 4:
-			m = "APR";
+			m = &"APR";
 			break;
 		case 5:
-			m = "MAY";
+			m = &"MAY";
 			break;
 		case 6:
-			m = "JUN";
+			m = &"JUN";
 			break;
 		case 7:
-			m = "JUL";
+			m = &"JUL";
 			break;
 		case 8:
-			m = "AUG";
+			m = &"AUG";
 			break;
 		case 9:
-			m = "SEP";
+			m = &"SEP";
 			break;
 		case 10:
-			m = "OCT";
+			m = &"OCT";
 			break;
 		case 11:
-			m = "NOV";
+			m = &"NOV";
 			break;
 		case 12:
-			m = "DEC";
+			m = &"DEC";
 			break;
 		}
 	
 		printf("*** Log Date Set! ***\n");
-		printf("%d-%d-%d", &y, &m, &d);
+		printf("%d-%d-%d", y, m, d);
 	}
 	return 0;
 
